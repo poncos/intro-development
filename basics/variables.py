@@ -13,6 +13,9 @@ string_sum = string_var + " bye"
 print("numerical sum: ", numerical_sum)
 print("string_sum:", string_sum)
 
+type(numeric_var)
+type(string_var)
+
 # ================== Variable scope ==================
 string_var = 15
 
@@ -29,8 +32,15 @@ def another_function():
     # Here we are using the variable value defined in a wider sope
     print("another function string_var: ", string_var)
 
+def globalvar_function():
+    global string_var
+    string_var = 20
+    print("string_var within globalvar: ", string_var)
+
 my_function()
 another_function()
+globalvar_function()
+
 print("string_var: ", string_var)
 # ==================  ==================
 
@@ -44,4 +54,9 @@ print("string_sum with typee transformation: ", string_sum)
 
 
 # ================== Arrays =================
+# Access to each element by index (position)
+string_array_value = string_array_var[0]
+string_array_var[0] = "another_value"
+
+array_num_elemennts = len(string_array_var)
 
