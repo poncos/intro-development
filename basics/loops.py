@@ -5,6 +5,9 @@ list1 = [0, 1, 2, 3]
 for number in list1:
     print(number)
 
+for number in range(len(list1)):
+    print(list1[number])
+
 for number in range(5):
     print(number)
 
