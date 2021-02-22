@@ -1,5 +1,7 @@
 # Introduction to Programming
 
+
+
 ## Basic concepts
 
 ### Types and Objects
@@ -151,9 +153,39 @@ int main(int argc, char** argv) {
 ![](../static/screenshots/max_values.png)
 
 
+## Branching Programming
 
-## Branching programming
 
+With the concepts we have seen so far we can make programs made of a list of statements and they will be executed
+one after another in the same order as they are written. This is a good start, but any
+realistic program, at some point will need to make some kind of decision to execute one sentence or another. 
+
+Conditional statements are based on the *if-then* or *if-then-else* block, what they do is to evaluate
+a condition given by the programmer and if the condition evaluates to *True* the *then* block is executed. If
+the evaluation is *False* and there is a *else* block this will be executed.
+
+```python
+age = 18
+if age > 18:
+    print("Your are older than eighteen")
+else:
+    print("Your are NOT older than eighteen")
+```
+
+
+```python
+age = 18
+if age > 18:
+    print("Your are older than eighteen")
+```
+
+
+![](../static/diagrams/age.png)
+
+
+```python
+TBD = True
+```
 
 ## Iterations
 
