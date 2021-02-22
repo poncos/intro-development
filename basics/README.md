@@ -1,6 +1,8 @@
 # Introduction to Programming
 
-## Types, Objects, Variables, Operators and Sentences
+## Basic concepts
+
+### Types and Objects
 
 Every programming language has the concept of *types* of data, like numerical or scalar types, alphanumeric or strings type.
 
@@ -14,12 +16,21 @@ The different basic types available in Python are:
 - Bool
 - String 
 
+It is important the reader understand that although the basic data types are similar in any programming language they
+do can vary from one language to another. For example in the C programming language these are the basic data types.
+
+- int
+- long
+- float
+- double
+- char
+
+
 ### Expression
 
 A expression is defined as any unit or entity of code that can be evaluated to determine the expression value (which in the casee
 of Python is an object). It is a combination of objects and operators.
 
-Operators 
 
 A basic classification is to devide the types of expressions in two categories: 1) Assignment, those expressions that assign
 a value to a variable, and 2) those expressions that simply has a value. In the following examples, the first two expressions
@@ -69,6 +80,76 @@ the variable *area*, therefore later in the code we can use it as many times as 
 expression again. For example in the *print* operation, we just use the value pre-calculated available in the variable value.
 
 - **Self-documented code**.
+
+#### Data type encoding and precision
+
+It is important to understand that in the end, data types are sequence of bits (0 and 1 symbols) located in the computer memory, and
+in that sense there is no difference between numeric, alphanumeric or any other data type. The only difference is
+the how the program interprets the information.
+
+For example, a character variable is represented as a sequence of bits and then the value is interpreted according to
+standards like [ASCII](https://en.wikipedia.org/wiki/ASCII), [UTF-8](https://en.wikipedia.org/wiki/UTF-8) or 
+[UTF-16](https://en.wikipedia.org/wiki/UTF-16#UTF-16BE). For example, according to the ASCII standard, the lower case
+characters from *'a'* to *'z'* are encoded with the numeric values from *97* to *122*. This can be easily testd in Python
+using the bult-in function **ord(<character>)** which for a given character returns the corresponding numerical value.
+
+   ![](../static/screenshots/ascii.png)
+   
+
+This is called **encoding**, to the fact of using a type of mapping to represent a set of characters. In this case, the mapping
+is from a sequence of bits (numeric values) to a set of alphanumerical characters.
+
+In the case of characters, the maximum number of bits used for the encoding is important because it tell us the maximum number
+of characters that will be represented. For example, the encoding UTF-16, which is common nowadays uses a longer sequence of 
+bits (16 bits which is two bytes) in contrast to the 8 bits (1 byte) used by the ASCII standard.
+
+In the case of numeric values, the number of bits is important because it will give us the maximum value we can represent. For
+example if we only used two bits for a variable the maximum value would be 4 in decimal (2 to the power of 2). In Python the 
+programmer do not have to worry about this, because the *Integer* type is dynamic in the sense that can increase the number
+of bits as needed, but in other languages like *C* it is not like that, and that is why there are different types of numeric values.
+
+The value range supported by the different numerical types is important, and the programmer must take it into account or
+strange things might happen in the program execution. As indicated above, in *C* the maximum number of digits used to
+represent a numerical value is fixed, and that implies there is a fixed maximum value for each particular data type.
+
+Type   | Storage Size | Value Range
+---    | ---          | ---
+int    | 4 bytes      | -2,147,483,648 to 2,147,483,647
+long   | 8 bytes      | -9223372036854775808 to 9223372036854775807
+float  | 4 bytes      | 1.2E-38 to 3.4E+38
+double | 8 byte       | 2.3E-308 to 1.7E+308
+char   | 1 byte       | 0 to 255
+
+
+As an example of why the programmer should have in mind these restrictions, the following program can be a good explanation.
+If we compile the program using the command **gcc** an then we execute it as depicted in the screenshot, immediately there is
+something strange with the second line printed in the console. Looking at the source code, the variable *unexpected_numeric_value*
+is assigned the value *max_numeric_value + 1*, but the value printed in the console is a very negative value. This is called
+**[integer overflow](https://en.wikipedia.org/wiki/Integer_overflow)**, we are assigning a value to a variable of type *int* which
+ is outside of the range allowed by the number of digits used for that data type.
+
+```c
+#include<stdio.h>
+#include<limits.h>
+
+int main(int argc, char** argv) {
+
+	int max_numeric_value = INT_MAX;
+
+	int unexpected_numeric_value = max_numeric_value + 1;
+
+	int expected_numeric_value = max_numeric_value - 1;
+
+	printf("Max numeric value %d\n", max_numeric_value);
+
+	printf("Unexpected numeric value %d\n", unexpected_numeric_value);
+
+	printf("Expected numeric value %d\n", expected_numeric_value);
+}
+```
+
+![](../static/screenshots/max_values.png)
+
 
 
 ## Branching programming
