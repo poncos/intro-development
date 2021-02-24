@@ -204,13 +204,6 @@ the expression inmediately after the *if* keyword is a logical expression which 
 block of statements after the *else* keyword are executed (if there is a *else* block).  
 
 
-![](../static/diagrams/age.png)
-
-
-```python
-TBD = True
-```
-
 Logical Operator    | Description
 ---                 | ---
 ==                  | 
@@ -220,10 +213,99 @@ Logical Operator    | Description
 <=                  |
 >=                  |
 
+
+![](../static/diagrams/age.png)
+
+```python
+from datetime import date
+
+day = int(input("Please enter the day you were born? "))
+month = int(input("Please enter the month you were born? "))
+year = int(input("Please enter the year you were born? "))
+
+now = date.today()
+current_year = now.year
+current_day = now.day
+current_month = now.month
+
+year_diff = current_year - year
+
+if current_month < month:
+    age = year_diff -1
+else:
+    if current_month > month:
+        age = year_diff
+    else:
+        if current_day < day:
+            age = year_diff - 1
+        else:
+            age = year_diff
+
+print("Your age is " + str(age) + " years old.")
+```
+
+### ELSE IF block
+
+```python
+from datetime import date
+
+day = int(input("Please enter the day you were born? "))
+month = int(input("Please enter the month you were born? "))
+year = int(input("Please enter the year you were born? "))
+
+now = date.today()
+current_year = now.year
+current_day = now.day
+current_month = now.month
+
+year_diff = current_year - year
+
+if current_month > month:
+    age = year_diff
+elif current_month < month:
+    age = year_diff -1
+elif current_day < day:
+    age = year_diff - 1
+else:
+    age = year_diff
+
+print("Your age is " + str(age) + " years old.")
+```
+
 ### Boolean Logic
 
-Logical Operator    | Description
----                 | ---
+Boolean logic is the branch of Algebra responsible to study systems based on variables which can only
+take two posible values, *truth value* or and *false value* (True and False). It is extensively used
+in digital electronics (where the only two logical values a signal can take are zero and one), and in
+programming where it is use to control the execution flow.
+
+There are three basic operations used in boolean logic. 
+
+Logic Operation     | Expression        | Description
+---                 | ---               | ---       
+AND                 | x and y           | True only if both variables are True
+OR                  | x or y            | True if one of the variable is true or both
+NOT                 | not x             | True if the variable False, and False if the variable is True
+
+To understand better what is the logic operations output for all the possible combination of the variables
+values the **truth tables** are used, as it is shown in the following table where zero means false, and 1 means true.
+
+x   | y     | x AND y   | x OR y
+--- | ---   | ---       | ---
+0   | 0     | 0         | 0
+1   | 0     | 0         | 1
+0   | 1     | 0         | 1
+1   | 1     | 1         | 1
+
+
+x   | NOT x 
+--- | ---       
+0   | 1
+1   | 0
+ 
+
+![](../static/screenshots/boolean_logic.png)
+
 
 
 ## Iterations

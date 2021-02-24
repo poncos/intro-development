@@ -11,15 +11,13 @@ current_month = now.month
 
 year_diff = current_year - year
 
-if current_month < month:
+if current_month > month:
+    age = year_diff
+elif current_month < month:
     age = year_diff -1
+elif current_day < day:
+    age = year_diff - 1
 else:
-    if current_month > month:
-        age = year_diff
-    else:
-        if current_day < day:
-            age = year_diff - 1
-        else:
-            age = year_diff
+    age = year_diff
 
 print("Your age is " + str(age) + " years old.")
