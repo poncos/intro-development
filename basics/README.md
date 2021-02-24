@@ -26,13 +26,12 @@ do can vary from one language to another. For example in the C programming langu
 - float
 - double
 - char
+- bool
 
 
 ### Expression
 
-A expression is defined as any unit or entity of code that can be evaluated to determine the expression value (which in the casee
-of Python is an object). It is a combination of objects and operators.
-
+A expression is defined as any unit or entity of code that can be evaluated to determine the expression value.
 
 A basic classification is to devide the types of expressions in two categories: 1) Assignment, those expressions that assign
 a value to a variable, and 2) those expressions that simply has a value. In the following examples, the first two expressions
@@ -40,7 +39,7 @@ belong to the second category, and the third one to the first category.
 
 - 5 + 3. This expression is a Integer expression because its value is a *intiger*.
 - 5.0 + 3.0. This is a *float* expression.
-- x = 5 + 3. This is a integer expression where the value is assigned to the variable *x*.
+- 5 < 10. Relational expression which evaluates to a *boolean* value, in this case *True*.
 
 There are as well, **boolean expression** that evaluate to a *bool* value, and **string expressions**.
 
@@ -55,6 +54,18 @@ for different data types. The second expression in the image shows the operator 
 outcome is the two strings concatenated. The last expression results in a error, because the operator '+' does not
 work with one argument being a *string* and another one being an *integer*.
 
+### Statements
+
+A statement is a single unit in the programming language. A statement can have structure with
+internal components like expression. For example two types of simple expression that will see later
+are:
+
+- **Assignment**. *x = 5 + 1*
+- **Return**. *return x+5*
+- **Conditionals**. "if x < 10 then print('hello')" 
+
+There are more types of expression that will see in this article but for now we only need to understand
+the concept, and understand that **a program is a sequence of statements**.
 
 ### Variables
 
@@ -164,6 +175,14 @@ Conditional statements are based on the *if-then* or *if-then-else* block, what 
 a condition given by the programmer and if the condition evaluates to *True* the *then* block is executed. If
 the evaluation is *False* and there is a *else* block this will be executed.
 
+```
+If <logical_expression> Then
+    <statements>
+Else
+    <statements>
+End If
+```
+
 ```python
 age = 18
 if age > 18:
@@ -179,6 +198,11 @@ if age > 18:
     print("Your are older than eighteen")
 ```
 
+the expression inmediately after the *if* keyword is a logical expression which evalues to a boolean value 
+(True or False), and if the result of this expression is *True* the block of statements between the 
+*if* and *else* keywords are executed, otherwise if the logical expression evalutes to *False* the
+block of statements after the *else* keyword are executed (if there is a *else* block).  
+
 
 ![](../static/diagrams/age.png)
 
@@ -186,6 +210,21 @@ if age > 18:
 ```python
 TBD = True
 ```
+
+Logical Operator    | Description
+---                 | ---
+==                  | 
+<                   |
+>                   |
+!=                  |
+<=                  |
+>=                  |
+
+### Boolean Logic
+
+Logical Operator    | Description
+---                 | ---
+
 
 ## Iterations
 
@@ -195,7 +234,7 @@ TBD = True
 
 ### Arrays
 
-### Multi-dimensional Arrays
+### Matrices
 
 
 ### Dictionaries
