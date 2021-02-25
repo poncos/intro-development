@@ -306,20 +306,70 @@ x   | NOT x
 
 ![](../static/screenshots/boolean_logic.png)
 
+```python
+a_number = 10
+min_value = 5
+max_value = 15
+
+if a_number >= min_value and a_number <= max_value:
+    print("valid value")
+else:
+    print("out of range value")
+```
+
+```python
+check_limits = False
+a_number = 0
+min_value = 5
+max_value = 15
+
+if (a_number >= min_value and a_number <= max_value) or not check_limits:
+    print("valid value")
+else:
+    print("out of range value")
+```
 
 
 ## Iterations
 
+In the previous section we have introduce *branching* as a method to allow us create more complex programs 
+able to extend the type of problems we can solve, but even with branches there are many real problems
+we cannot cover unless we can iterate over arbitrary list of elements. For example, imagine a simple program
+to calculate the sum of the natural numbers until a number chosen by the user.
 
-## Basic data structures
+```python
+x = int(input("Please insert a number"))
 
+sum = 0
+
+if x == 1:
+    sum += 1
+elif x == 2:
+    sum += 2
+elif x == 3:
+    sum += 3
+else:
+    print("Number introduced too big.")
+
+print("The sum is: ", sum)
+```
+
+```python
+x = int(input("Please insert a number"))
+
+sum = 0
+counter = 0
+
+while counter < x:
+    sum += 1
+
+print("The sum is: ", sum)
+
+```
 
 ### Arrays
 
 ### Matrices
-
-
-### Dictionaries
 
 
 ### Functions  
