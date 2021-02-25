@@ -335,41 +335,44 @@ else:
 In the previous section we have introduce *branching* as a method to allow us create more complex programs 
 able to extend the type of problems we can solve, but even with branches there are many real problems
 we cannot cover unless we can iterate over arbitrary list of elements. For example, imagine a simple program
-to calculate the sum of the natural numbers until a number chosen by the user.
+to print a message as many times as a given number given as input.
 
 ```python
 x = int(input("Please insert a number"))
 
-sum = 0
-
 if x == 1:
-    sum += 1
+    print("Message 1")
 elif x == 2:
-    sum += 2
+    print("Message 2")
 elif x == 3:
-    sum += 3
+    print("Message 3")
 else:
     print("Number introduced too big.")
-
-print("The sum is: ", sum)
 ```
 
 ```python
 x = int(input("Please insert a number"))
 
-sum = 0
 counter = 0
 
 while counter < x:
-    sum += 1
-
-print("The sum is: ", sum)
-
+    print("Message ", counter)
+    counter += 1
 ```
 
-### Arrays
+### For Loops
 
-### Matrices
+```python
+x = int(input("Please insert a number"))
+
+for counter in range(x):
+    print("Message ", counter)
+```
+
+![](../static/screenshots/for_loop.png)
+
+
+### Arrays
 
 
 ### Functions  
