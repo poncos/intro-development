@@ -382,8 +382,27 @@ for counter in range(x):
 
 ![](../static/screenshots/for_loop.png)
 
+```
+#include<stdio.h>
 
-### Arrays
+int main(int argc, char** argv) {
 
+	int counter;
+	int max_count = 10;
 
-### Functions  
+	for (counter = 0; counter < max_count; counter = counter + 1) {
+		printf("Iteration %d\n", counter);
+	}	
+}
+```
+
+Assuming the code above is in a local file named *for_loop.c* in a linux machine could be compiled using 
+the **gcc** tool and run as in the following screenshot.
+
+![](../static/screenshots/for_loop_c.png)
+
+## Arrays
+
+### Matrices
+
+## Functions  
