@@ -4,6 +4,7 @@
 
 ## Basic concepts
 
+
 ### Types and Objects
 
 Every programming language has the concept of *types* of data, like numerical or scalar types, alphanumeric or strings type.
@@ -204,14 +205,24 @@ the expression inmediately after the *if* keyword is a logical expression which 
 block of statements after the *else* keyword are executed (if there is a *else* block).  
 
 
-Logical Operator    | Description
----                 | ---
-==                  | 
-<                   |
->                   |
-!=                  |
-<=                  |
->=                  |
+Logical Operator    | Expression| Description
+---                 | ---       | ---
+==                  | x == y    | It evaluates to True if both arguments are equal 
+!=                  | x != y    | It evaluates to True if both arguments are different
+<                   | x < y     | It evaluates to True if the first argument is less than the second
+>                   | x > y     | It evaluates to True if the first argument is greater than the second
+<=                  | x <= y    | It evaluates to True if the first argument is less than or equals than the second
+>=                  | x >= y    | It evaluates to True if the first argument is greater than or equals than the second
+
+One example showing the logical operators in action using the Python shell.
+
+![](../static/screenshots/logical_operators.png)
+
+At this point, it is useful start creating **flow diagrams** to document our algorithms, where we
+can see the conditional statements as diamong shapes with two outgoing arrows, one for the case when the condition
+is evaluated to *True* and another for the *False* case. 
+
+As example, lets create a small algorithm to calculate the age of someone based on the date of birth.
 
 
 ![](../static/diagrams/age.png)
