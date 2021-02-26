@@ -29,6 +29,9 @@ do can vary from one language to another. For example in the C programming langu
 - char
 - bool
 
+### Casting
+
+<TBD>
 
 ### Expression
 
@@ -95,7 +98,7 @@ expression again. For example in the *print* operation, we just use the value pr
 
 - **Self-documented code**.
 
-#### Data type encoding and precision
+#### Data Encoding
 
 It is important to understand that in the end, data types are sequence of bits (0 and 1 symbols) located in the computer memory, and
 in that sense there is no difference between numeric, alphanumeric or any other data type. The only difference is
@@ -142,7 +145,7 @@ is assigned the value *max_numeric_value + 1*, but the value printed in the cons
 **[integer overflow](https://en.wikipedia.org/wiki/Integer_overflow)**, we are assigning a value to a variable of type *int* which
  is outside of the range allowed by the number of digits used for that data type.
 
-```c
+```
 #include<stdio.h>
 #include<limits.h>
 
@@ -382,6 +385,10 @@ for counter in range(x):
 
 ![](../static/screenshots/for_loop.png)
 
+In the Python example above the function **range** is being used to define the range of values the loop
+will have to iterate through. There is another quite common way of define a *for loop* in other languages like 
+C or Java. In the following example the same funtionality is writen in the *C* programming language.
+
 ```
 #include<stdio.h>
 
@@ -391,7 +398,7 @@ int main(int argc, char** argv) {
 	int max_count = 10;
 
 	for (counter = 0; counter < max_count; counter = counter + 1) {
-		printf("Iteration %d\n", counter);
+		printf("Message %d\n", counter);
 	}	
 }
 ```
@@ -403,6 +410,48 @@ the **gcc** tool and run as in the following screenshot.
 
 ## Arrays
 
-### Matrices
+So far we have talked about basic data types, which are also called **primitive data types** or
+**built-in data types**, because they are included in the programming language and they cannot be 
+decomposed in smaller peaces. An exception can be the data type **string** which can be seen as a 
+sequence of *characters*.
+
+Aside from a set of primitive built-in data types which the programmer can use as building blocks, 
+every programming language comes with other data types which are normally called **composite data types**. 
+These new data types are more complex structures built on top of the **primitive data types**.
+
+The most basic **composite data type** that every programming language comes with is the 
+*Array* data type which is a collections of elements of the same type stored in contiguous memory positions.
+The fact that the elements are stored in contiguous memory position makes easier access to individual
+elements using an index or position.  
+
+**[TBD image here]**
+
+The image above is a logical view of the array data structure, where we can see the first element
+is indexed by the position number *0*. As a concrete example in Python we can check the code below.
+
+```python
+an_array_variable = [7, 8, 9, 10]
+print("The second position in the array has the value: ", an_array_variable[1])
+
+
+x = 10
+y = 20
+z = 30
+another_array_variable = [x, y, z]
+print("The sum of the first and third position are: ",another_array_variable[0] + another_array_variable[2])
+```
+
+In the array definition we said that all the elements in an array are values or variables of the same
+type, which we can see in the previous example, all the elements and *integers*. In Python this is not
+true, because in Python yes we can have different data types in the same array variable.
+
+```python
+an_array_variable = ["Hello",5]
+print(an_array_variable[0], "Number", an_array_variable[1])
+```
+
+### Array Dimensions
+
+
 
 ## Functions  
