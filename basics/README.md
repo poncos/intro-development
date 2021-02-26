@@ -452,6 +452,29 @@ print(an_array_variable[0], "Number", an_array_variable[1])
 
 ### Array Dimensions
 
+An array like the ones seen so far only have one dimension or **axis**, but arrays can have more than
+one dimension. In the case of arrays with one dimension they are called **vector** or **list**, in
+the case of two dimensiones they are called **matrix** or **table**, and there could be arrays
+with three or more dimensions.
 
+Along with the case of one axis we have seen already, the case of two dimensions is a typical data
+structure use in a lot of programs. 
+
+```python
+a_matrix_variable = [
+[1, 2, 3,4, 5],
+[6, 7, 8, 9, 10],
+[11, 12, 13, 14, 15]
+]
+
+a_matrix_variable[2][1]
+```
+
+When speaking about **Matrices**, we talk about **rows** and **columns**, in the previous example,
+the declared matrix has three rows and four columns and we can see in the last line of the example
+how we can access to one element in the matrix using two **indices**, the first one is the row number
+and the second one is the column. In this case the value at the row 2 and column 1 is the value 12 
+(remember that indices start on zero).
+  
 
 ## Functions  
