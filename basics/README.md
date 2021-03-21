@@ -477,4 +477,48 @@ and the second one is the column. In this case the value at the row 2 and column
 (remember that indices start on zero).
   
 
-## Functions  
+## Functions and Procedures
+
+So far we have seen how we can write sentences one after another and then make the computer
+execute them sequentially. We have seen how to use conditional statements, and
+loops to skip statements and choose another ones and to execute multiple times a
+block os statements.
+
+With those concepts we have seen so far, we can implement very complex programs but
+those programs could be very difficult to understand and maintain, we need to have
+a way to structure our code, splitting it in small peaces of reusable and independent code.
+
+Before going further on this topic, it might be better show a very simple example to make sure
+we all know what we are talking about. In the following code, we have define a function named
+*sum* which takes to parameters as input *a and b* and the body of the function is a single
+line of code which returns the sum of both values.
+
+````python
+def sum(a, b):
+ return a + b
+
+sum(3, 5)
+sum(10, 50)
+````
+
+In some literature we might find the terminology using *functions* and *procedures*, which diference
+is that functions can return a value, and procedures do not return any value, just execute
+some code making use of the arguments received. This differentiation is not very important nowadays
+because most of the modern programming languages do not use them, it is common nowadays just
+talk bout function independently if they return a value or not.
+
+Let's look at the sample above more closely. We have define a function, which in the case
+of *Python* it is done using the keyword **def** followed by the function name, and the
+arguments received by the function between braces. In this case, as the function must
+return a value, the keyword **return** is used to do this.
+
+Something important, if that the code defining the function, is just doing that, defining it, 
+despite what happen with any other sentence in the code that is executed when it is found, functions
+are executed when they are invoked. In this case, when we invoke it with arguments
+3 and 5, and then with arguments 10 and 50.
+
+**TBD screenshot here**
+
+
+
+
