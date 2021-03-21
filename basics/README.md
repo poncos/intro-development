@@ -519,6 +519,28 @@ are executed when they are invoked. In this case, when we invoke it with argumen
 
 **TBD screenshot here**
 
+## Solved Problems
 
+### Variables
+TBD
 
+### Collections
+TBD
 
+### Vectors
+TBD
+
+#### 1. Define a function that given a number N as input argument returns an array with the first N elements of the fibonaci serie.
+
+```python
+def fibonacci(n):
+    return []
+
+fibonacci_vector_10 = fibonacci(10)
+for number in fibonacci_vector_10:
+    print(number)
+```
+
+### Matrices
+
+TBD
