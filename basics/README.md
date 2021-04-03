@@ -475,6 +475,10 @@ the declared matrix has three rows and four columns and we can see in the last l
 how we can access to one element in the matrix using two **indices**, the first one is the row number
 and the second one is the column. In this case the value at the row 2 and column 1 is the value 12 
 (remember that indices start on zero).
+
+```python
+TBD algorithm iterate matrix by row
+```
   
 
 ## Functions  
